@@ -26,8 +26,8 @@ INSERT INTO Clients (clientId, clientName, email, phone, contactPerson, activeAg
 
 INSERT INTO Contracts (contractId, clientId, title, agreementType, client, contractValue, dateConcluded, execDate) VALUES
 (101, 1, 'AI Research Agreement', 'Service', 'Tech Innovators Inc.', 50000.00, '2023-11-01', '2024-01-15'),
-(102, 2, 'Energy Efficiency Study', 'Consulting', 'Green Solutions Ltd.', 75000.00, '2023-10-15', '2024-06-30'),
-(103, 3, 'Logistics Software Development', 'Software', 'Alpha Logistics', 60000.00, '2023-09-10', '2024-03-15'),
+(102, 1, 'Energy Efficiency Study', 'Consulting', 'Green Solutions Ltd.', 75000.00, '2023-10-15', '2024-06-30'),
+(103, 1, 'Logistics Software Development', 'Software', 'Alpha Logistics', 60000.00, '2023-09-10', '2024-03-15'),
 (104, 4, 'Travel Services Platform', 'Software', 'Blue Horizon Travels', 45000.00, '2023-12-01', '2025-09-01'),
 (105, 5, 'Construction Monitoring', 'Service', 'Peak Construction Co.', 80000.00, '2023-08-15', '2024-12-20'),
 (106, 6, 'Environmental Analysis', 'Consulting', 'EcoWorld', 70000.00, '2023-07-10', '2024-11-15'),
@@ -51,8 +51,8 @@ INSERT INTO Contracts (contractId, clientId, title, agreementType, client, contr
 
 INSERT INTO Attachments (attachId, attachName, type, contractId) VALUES
 (201, 'Contract Details Document', 'PDF', 101),
-(202, 'Energy Assessment Report', 'PDF', 102),
-(203, 'Optimization Tool Manual', 'DOCX', 103),
+(202, 'Energy Assessment Report', 'PDF', 101),
+(203, 'Optimization Tool Manual', 'DOCX', 101),
 (204, 'Travel App Wireframes', 'IMG', 104),
 (205, 'Site Monitoring Blueprint', 'DWG', 105),
 (206, 'Eco Impact Study Results', 'PDF', 106),
@@ -76,8 +76,8 @@ INSERT INTO Attachments (attachId, attachName, type, contractId) VALUES
 
 INSERT INTO Invoices (invoiceId, contractId, clientId, paymentDate, paymentStatus, amount) VALUES
 (301, 101, 1, '2024-01-20 10:30:00', TRUE, 50000.00),
-(302, 102, 2, '2023-12-15 15:45:00', TRUE, 75000.00),
-(303, 103, 3, '2024-03-01 09:00:00', FALSE, 60000.00),
+(302, 102, 1, '2023-12-15 15:45:00', TRUE, 75000.00),
+(303, 103, 1, '2024-03-01 09:00:00', FALSE, 60000.00),
 (304, 104, 4, '2023-12-10 14:00:00', TRUE, 45000.00),
 (305, 105, 5, '2024-04-01 12:30:00', FALSE, 80000.00),
 (306, 106, 6, '2023-11-20 16:15:00', TRUE, 70000.00),
@@ -125,14 +125,14 @@ INSERT INTO Projects (projectId, clientId, name, endDate, budget, projectType, c
 -- TASKS
 
 INSERT INTO Tasks (taskId, contractId, clientId, projectId, dateExec, taskDesc) VALUES
-(1, 101, 1, 1, '2024-02-15', 'Design the architecture for the AI research platform.'),
-(2, 102, 2, 2, '2024-01-10', 'Conduct an on-site energy assessment for the renewable project.'),
-(3, 103, 3, 3, '2024-02-28', 'Develop the logistics optimization algorithm.'),
+(1, 101, 1, 9, '2024-02-15', 'Design the architecture for the AI research platform.'),
+(2, 102, 2, 9, '2024-01-10', 'Conduct an on-site energy assessment for the renewable project.'),
+(3, 103, 3, 9, '2024-02-28', 'Develop the logistics optimization algorithm.'),
 (4, 104, 4, 4, '2024-03-20', 'Create user interface designs for the travel booking app.'),
 (5, 105, 5, 5, '2024-04-15', 'Install monitoring equipment at the construction site.'),
 (6, 106, 6, 6, '2024-05-01', 'Analyze environmental impact data and prepare a report.'),
 (7, 107, 7, 7, '2024-05-25', 'Build a financial dashboard for real-time analytics.'),
-(8, 108, 8, 8, '2024-06-10', 'Develop and test the streaming content platform.'),
+(8, 108, 8, 9, '2024-06-10', 'Develop and test the streaming content platform.'),
 (9, 109, 9, 9, '2024-06-30', 'Create quantum computing framework documentation.'),
 (10, 110, 10, 10, '2024-07-15', 'Analyze marine ecosystem data and draft findings.'),
 (11, 111, 11, 11, '2024-08-01', 'Develop urban planning models for new software.'),
